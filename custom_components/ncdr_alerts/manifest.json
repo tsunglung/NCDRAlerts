@@ -1,0 +1,11 @@
+{
+  "domain": "ncdr_alerts",
+  "name": "Taiwan NCDR Alerts \u6c11\u751f\u793a\u8b66",
+  "documentation": "https://github.com/tsunglung/NcdrAlerts",
+  "issue_tracker": "https://github.com/tsunglung/NcdrAlerts/issues",
+  "version": "1.0.0",
+  "requirements": ["requests"],
+  "codeowners": ["@tsunglung"],
+  "config_flow": true,
+  "iot_class": "cloud_polling"
+}
