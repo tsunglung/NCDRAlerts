@@ -7,7 +7,7 @@
 
 # 安裝
 
-你可以用 [HACS](https://hacs.xyz/) 來安裝這個整合。 步驟如下 custom repo: HACS > Integrations > 3 dots (upper top corner) > Custom repositories > URL: `tsunglung/NCDRAlerts` > Category: Integration
+你可以用 [HACS](https://hacs.xyz/) 來安裝這個整合。 步驟如下 custom repo: HACS > Integrations > 3 dots (upper top corner) > Custom repositories > URL: `tsunglung/NCDRAlerts` > Category: Integration。 加入這個整合後, 別忘了按 *安裝*。
 
 或是手動複製 `ncdr_alerts` 資料夾到你的 config 資料夾的  `custom_components` 目錄下。
 

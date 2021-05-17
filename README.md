@@ -7,7 +7,7 @@ This integration is based on MetOffice to develop.
 
 ## Install
 
-You can install component with [HACS](https://hacs.xyz/) custom repo: HACS > Integrations > 3 dots (upper top corner) > Custom repositories > URL: `tsunglung/NCDRAlerts` > Category: Integration
+You can install component with [HACS](https://hacs.xyz/) custom repo: HACS > Integrations > 3 dots (upper top corner) > Custom repositories > URL: `tsunglung/NCDRAlerts` > Category: Integration. After added, press 'Install' to install this component.
 
 Or manually copy `ncdr_alerts` folder to `custom_components` folder in your config folder.
 

@@ -71,10 +71,11 @@ class NcdrAlertData:
 
         for i in self.alerts_type:
             if i in ALERTS_AREA:
-                self.uri = "{}Country={}".format(BASE_URL, i)
+                self.uri = "{}County={}".format(BASE_URL, i)
             else:
                 self.uri = "{}AlertType={}".format(BASE_URL, i)
 
+            req = None
             try:
                 req = requests.post(
                     self.uri,
@@ -84,7 +85,7 @@ class NcdrAlertData:
             except requests.exceptions.RequestException as err:
                 _LOGGER.error("Failed fetching data for %s", ALERTS_TYPE[i])
 
-            if req.status_code == HTTP_OK:
+            if req and req.status_code == HTTP_OK:
                 self.data.append(self._parser_json(i, req.text))
                 if self.alert_name is None:
                     self.alert_name = "ncdr"
