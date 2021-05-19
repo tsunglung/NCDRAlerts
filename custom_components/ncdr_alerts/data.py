@@ -43,7 +43,8 @@ class NcdrAlertData:
 
     def get_data_for_alert(self, alert_type, data):
         """ return data """
-        return data
+        self._update_alerts()
+        return self.data
 
     def _parser_json(self, alert_type, text):
         """ parser json """

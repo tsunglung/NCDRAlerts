@@ -35,7 +35,7 @@ async def validate_input(hass: core.HomeAssistant, data):
     return {"alert_type": ncdr_type_data.alert_type}
 
 
-class NdcrAlertsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class NcdrAlertsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for NCDR Alerts integration."""
 
     VERSION = CONFIG_FLOW_VERSION
