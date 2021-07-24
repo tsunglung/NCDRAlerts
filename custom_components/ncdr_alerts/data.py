@@ -92,7 +92,7 @@ class NcdrAlertData:
                     self.alert_name = "ncdr"
                 self.alert_name = self.alert_name + "-" + i
             else:
-                _LOGGER.error("Received error from NCDR: %s", err)
+                _LOGGER.error("Received error from NCDR")
 
         return self.alert_name
 
