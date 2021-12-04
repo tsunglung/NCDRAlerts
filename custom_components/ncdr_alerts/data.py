@@ -4,12 +4,7 @@ import json
 
 from aiohttp.hdrs import USER_AGENT
 import requests
-
-from homeassistant.const import (
-    HTTP_OK,
-    HTTP_FORBIDDEN,
-    HTTP_NOT_FOUND,
-)
+import http
 
 from .const import (
     ALERTS_TYPE,
@@ -86,7 +81,7 @@ class NcdrAlertData:
             except requests.exceptions.RequestException as err:
                 _LOGGER.error("Failed fetching data for %s", ALERTS_TYPE[i])
 
-            if req and req.status_code == HTTP_OK:
+            if req and req.status_code == http.HTTPStatus.OK:
                 self.data.append(self._parser_json(i, req.text))
                 if self.alert_name is None:
                     self.alert_name = "ncdr"
