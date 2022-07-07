@@ -10,7 +10,6 @@ from .const import (
     ALERTS_TYPE,
     ALERTS_AREA,
     BASE_URL,
-    HA_USER_AGENT,
     REQUEST_TIMEOUT
 )
 
@@ -63,7 +62,6 @@ class NcdrAlertData:
 
     def _update_alerts(self):
         """Return the alert json."""
-        headers = {USER_AGENT: HA_USER_AGENT}
 
         for i in self.alerts_type:
             if i in ALERTS_AREA:
@@ -75,7 +73,6 @@ class NcdrAlertData:
             try:
                 req = requests.post(
                     self.uri,
-                    headers=headers,
                     timeout=REQUEST_TIMEOUT)
 
             except requests.exceptions.RequestException as err:
