@@ -1,7 +1,7 @@
 """Support for NCDR alerts service."""
 
-from homeassistant.components.sensor import SensorEntity
-from homeassistant.const import ATTR_ATTRIBUTION, DEVICE_CLASS_TIMESTAMP
+from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
+from homeassistant.const import ATTR_ATTRIBUTION
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.typing import ConfigType
 
@@ -91,7 +91,7 @@ class NcdrAlertSensor(SensorEntity):
     @property
     def device_class(self):
         """Return the device class of the sensor."""
-        return DEVICE_CLASS_TIMESTAMP
+        return SensorDeviceClass.TIMESTAMP
 
     @property
     def extra_state_attributes(self):
