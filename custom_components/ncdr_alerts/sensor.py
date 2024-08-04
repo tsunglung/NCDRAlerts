@@ -71,10 +71,10 @@ class NcdrAlertSensor(SensorEntity):
         for i in self.ncdr_alerts_now:
             for j, k in i.items():
                 if self.ncdr_alerts_alert_type == j:
-                    self._last_update = k["updated"]
-                    self._title = k["title"]
-                    self._author = k["author"]
-                    self._text = k["text"]
+                    self._last_update = k.get("updated", "")
+                    self._title = k.get("title", "")
+                    self._author = k.get("author", "")
+                    self._text = k.get("text", "")
 
         return self._last_update
 
